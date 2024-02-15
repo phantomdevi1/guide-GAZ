@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  transition: 0.5s;
+}
+body {
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  text-align: center;
+  width: 100%;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+header h1 {
+  color: #2f7dbe;
+  font-size: 60px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.content_guide {
+  width: 95%;
+  margin-top: 75px;
+  min-height: 200px;
+  text-align: center;
+}
+.content_guide p {
+  color: red;
+  font-size: 30px;
+}
+table {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+th {
+  border: 1px solid #2f7dbe;
+  background-color: #2f7dbe;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+td {
+  border: 1px solid #2f7dbe;
+  font-size: 20px;
+  padding: 10px;
+}
+tr {
+  padding: 10px;
+}
+.img_table img {
+  width: 100px;
+}
+.nonstatic_ava:hover {
+  position: relative;
+  transform: scale(5);
+  cursor: pointer;
+}
+.num_phone {
+  min-width: 200px;
+}
+
+.highlight {
+  background-color: #2f7ebe75;
+}
+
+.hidden {
+  display: none;
+}
+.toggle-button {
+  background-color: #fff;
+  font-family: Roboto;
+  color: #2f7dbe;
+  font-size: 30px;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.burger-menu a {
+  font-size: 20px;
+  color: #2f7dbe;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  display: grid;
+  text-align: center;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Стили для формы в модальном окне */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  background-color: #2f7dbe;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0c3c64;
+}
