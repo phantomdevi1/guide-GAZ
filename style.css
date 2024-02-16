@@ -21,6 +21,9 @@ header h1 {
   font-weight: 300;
   text-transform: uppercase;
 }
+header img {
+  cursor: pointer;
+}
 .content_guide {
   width: 95%;
   margin-top: 75px;
@@ -92,6 +95,22 @@ tr {
   color: #2f7dbe;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
+}
+.burger-menu a:hover {
+  color: #2f7dbe;
+}
+.burger-menu a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .active {
@@ -166,4 +185,157 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #0c3c64;
+}
+
+/* admin */
+.admin_toolbar {
+  display: flex;
+  gap: 30px;
+}
+.admin_toolbar a {
+  color: #2f7dbe;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.admin_toolbar a:hover {
+  text-decoration: underline;
+}
+
+header span {
+  color: red;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.content_admin {
+  margin-top: 40px;
+  display: grid;
+  width: 60%;
+  gap: 30px;
+}
+.content_admin form {
+  display: grid;
+  width: 90%;
+}
+.new_user-btn {
+  background-color: #2f7dbe;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.new_user-btn:hover {
+  background-color: #0c3c64;
+}
+
+/* index */
+.slider-container {
+  max-width: 1900px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  margin-top: 150px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transition: 1s;
+}
+
+.slide {
+  max-width: 1918px;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 57%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow.prev {
+  left: 20px;
+}
+
+.arrow.next {
+  right: 20px;
+}
+
+.news {
+  width: 80%;
+  margin-top: 100px;
+  text-align: left;
+  margin-bottom: 100px;
+}
+.news p {
+  color: #2f7dbe;
+  font-size: 40px;
+  display: grid;
+}
+.news-item {
+  margin-top: 20px;
+  background-color: #88888836;
+  padding: 20px;
+  border-radius: 5px;
+}
+.news-title a {
+  color: #2f7dbe;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.news-title a:hover {
+  text-decoration: underline;
+}
+.view_all_news {
+  padding-top: 10px;
+  margin-bottom: 40px;
+  color: #2f7dbe;
+  font-size: 20px;
+}
+
+/* all news */
+.content_all_news {
+  width: 80%;
+  text-align: left;
+  margin-top: 50px;
+}
+.title_all_news {
+  color: #2f7dbe;
+  font-size: 40px;
+  display: grid;
+}
+
+.all_news-content {
+  font-size: 20px;
+}
+.all_news-item {
+  margin-top: 20px;
+  background-color: #88888836;
+  padding: 20px;
+  border-radius: 5px;
+}
+.read-more {
+  display: none;
+}
+
+/* add news */
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  font-size: 15px;
 }
