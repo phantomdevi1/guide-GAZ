@@ -77,17 +77,7 @@
 
 <p class="title_all_news">Все новости</p>
     <?php
-      // Подключение к базе данных
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "gazprom_guide";
-
-      $conn = new mysqli($servername, $username, $password, $dbname);
-
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
+    include 'config.php';
 
       // Запрос для получения всех новостей из базы данных
       $sql = "SELECT * FROM news ORDER BY date DESC";

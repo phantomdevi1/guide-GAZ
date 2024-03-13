@@ -1,14 +1,12 @@
 <?
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gazprom_guide";
+        $servername = "localhost";
+        $db_username = "root";
+        $db_password = "";
+        $dbname = "gazprom_guide";
 
-// Подключение к базе данных
-$conn = new mysqli($servername, $username, $password, $dbname);
+        $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
-// Проверка соединения
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
 ?>

@@ -42,16 +42,7 @@
         $password = $_POST['password'];
 
         // Подключение к базе данных
-        $servername = "localhost";
-        $db_username = "root";
-        $db_password = "";
-        $dbname = "gazprom_guide";
-
-        $conn = new mysqli($servername, $db_username, $db_password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+        include 'config.php';
 
         $sql = "SELECT * FROM admin_info WHERE name='$username' AND password='$password'";
         $result = $conn->query($sql);
@@ -74,16 +65,7 @@
       <div class="slider">
         <?php
           // Подключение к базе данных
-          $servername = "localhost";
-          $username = "root";
-          $password = "";
-          $dbname = "gazprom_guide";
-
-          $conn = new mysqli($servername, $username, $password, $dbname);
-
-          if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-          }
+          include 'config.php';
 
           // Запрос для получения слайдов из базы данных
           $sql = "SELECT * FROM slides";
