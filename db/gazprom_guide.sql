@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3307
--- Время создания: Фев 15 2024 г., 17:24
+-- Время создания: Мар 14 2024 г., 10:25
 -- Версия сервера: 8.0.30
 -- Версия PHP: 8.0.22
 
@@ -31,7 +31,7 @@ CREATE TABLE `admin_info` (
   `id` int NOT NULL,
   `name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Дамп данных таблицы `admin_info`
@@ -54,8 +54,8 @@ CREATE TABLE `guide` (
   `phone` varchar(18) NOT NULL,
   `office` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `img` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `img` varchar(255)  DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Дамп данных таблицы `guide`
@@ -86,7 +86,55 @@ INSERT INTO `guide` (`id`, `FIO`, `post`, `division`, `phone`, `office`, `mail`,
 (22, 'Антонов Антон Антонович', 'Заместитель PR-менеджера', 'Отдел PR', '456-789-123', '1102', 'antonov@gazprom.ru', NULL),
 (23, 'Никитин Никита Никитич', 'Специалист по информационным технологиям', 'Отдел IT', '789-123-456', '1201', 'nikitin@gazprom.ru', NULL),
 (24, 'Денисов Денис Денисович', 'Заместитель специалиста по информационным технологиям', 'Отдел IT', '987-654-321', '1202', 'denisov@gazprom.ru', NULL),
-(25, 'Марина Маринина Мариновна', 'Менеджер по связям с общественностью', 'Отдел связи с общественностью', '123-987-654', '1301', 'marina@gazprom.ru', NULL);
+(25, 'Марина Маринина Мариновна', 'Менеджер по связям с общественностью', 'Отдел связи с общественностью', '123-987-654', '1301', 'marina@gazprom.ru', NULL),
+(26, 'Панков Панк Панкович', 'Главный уборщик', 'Клиннинг', '553', '-', 'uborchik@gazprom.ru', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `news`
+--
+
+CREATE TABLE `news` (
+  `id` int NOT NULL,
+  `date` date NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+
+--
+-- Дамп данных таблицы `news`
+--
+
+INSERT INTO `news` (`id`, `date`, `title`, `content`) VALUES
+(1, '2024-02-16', 'Первая новость', 'Это первая новость в нашем справочнике.'),
+(2, '2024-02-15', 'Вторая новость', 'Это вторая новость в нашем справочнике.'),
+(3, '2024-02-19', 'Третья новость', 'Третья новость'),
+(4, '2024-02-16', 'Новая новость', 'Очень важно читать все новые новости'),
+(5, '2024-02-16', 'нвая новость 2', 'нвая новость 2'),
+(6, '2024-03-13', 'Новая новость 3', '3');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `slides`
+--
+
+CREATE TABLE `slides` (
+  `id` int NOT NULL,
+  `image_path` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+
+--
+-- Дамп данных таблицы `slides`
+--
+
+INSERT INTO `slides` (`id`, `image_path`, `title`) VALUES
+(1, 'img\\slider_up\\first.png', 'гололёд'),
+(2, 'img\\slider_up\\second.png', 'зарядка для глаз'),
+(3, 'img\\slider_up\\third.png', 'зарядка для тела'),
+(4, 'img\\slider_up\\four.png', 'экстренные службы');
 
 --
 -- Индексы сохранённых таблиц
@@ -105,6 +153,18 @@ ALTER TABLE `guide`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `slides`
+--
+ALTER TABLE `slides`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -118,7 +178,19 @@ ALTER TABLE `admin_info`
 -- AUTO_INCREMENT для таблицы `guide`
 --
 ALTER TABLE `guide`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT для таблицы `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `slides`
+--
+ALTER TABLE `slides`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
