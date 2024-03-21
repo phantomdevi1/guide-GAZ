@@ -213,6 +213,7 @@ header span {
   display: grid;
   width: 60%;
   gap: 30px;
+  margin-bottom: 50px;
 }
 .content_admin form {
   display: grid;
