@@ -74,7 +74,7 @@
           if ($result->num_rows > 0) {
               // Вывод слайдов
               while ($row = $result->fetch_assoc()) {
-                  echo "<div class='slide'><img src='" . $row["image_path"] . "' alt='" . $row["title"] . "'></div>";
+                  echo "<div class='slide'><img class='img_slider' src='" . $row["image_path"] . "' alt='" . $row["title"] . "'></div>";
               }
           } else {
               echo "<div class='slide'>Слайдов нет</div>";

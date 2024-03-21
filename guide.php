@@ -69,12 +69,12 @@
     <table>
         <tr>
             <th>ФИО</th>
-            <th>Фото</th>
-            <th>Должность</th>
-            <th>Подразделение</th>
-            <th>Телефон</th>
+            <th class="photo_adaptive-guide">Фото</th>
+            <th class="post_adaptive-guide">Должность</th>
+            <th class="division_adaptive-guide">Подразделение</th>
+            <th class="phone_adaptive-guide">Телефон</th>
             <th>Кабинет</th>
-            <th>Почта</th>
+            <th class="mail_adaptive-guide">Почта</th>
         </tr>
         <?php
             
@@ -94,11 +94,11 @@
                     } else {
                         echo "<td class='img_table'><img src='img\ava\default_photo.jpg' alt='Дефолт'></td>";
                     }
-                    echo "<td>" . $row["post"] . "</td>";
-                    echo "<td>" . $row["division"] . "</td>";
+                    echo "<td class='post_adaptive-guide'>" . $row["post"] . "</td>";
+                    echo "<td class='division_adaptive-guide'>" . $row["division"] . "</td>";
                     echo "<td class='num_phone'>" . $row["phone"] . "</td>";
                     echo "<td>" . $row["office"] . "</td>";
-                    echo "<td><a href='mailto:" . $row["mail"] . "'>" . $row["mail"] . "</td>";
+                    echo "<td class='mail_adaptive-guide'><a href='mailto:" . $row["mail"] . "'>" . $row["mail"] . "</td>";
                     echo "</tr>";
                 }
             } else {
