@@ -31,14 +31,14 @@
     <img src="img/logo1.svg" alt="" onclick="toggleMenu(event)"/>
     <h1>Новости</h1>
 </header>
+
+<div class="content_all_news">
 <div class="burger-menu">
         <a href="index.php">Главная</a>
         <a href="all_news.php">Новости</a>
         <a href="guide.php">Справочник</a>
         <a class="admin_auth" href="#">Для администратора</a>
     </div>
-<div class="content_all_news">
-
 <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
