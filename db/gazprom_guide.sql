@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1:3307
--- Время создания: Мар 14 2024 г., 10:25
+-- Хост: 127.0.0.1:3306
+-- Время создания: Июн 03 2024 г., 15:03
 -- Версия сервера: 8.0.30
--- Версия PHP: 8.0.22
+-- Версия PHP: 8.1.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `admin_info` (
   `id` int NOT NULL,
   `name` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `admin_info`
@@ -54,8 +54,8 @@ CREATE TABLE `guide` (
   `phone` varchar(18) NOT NULL,
   `office` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `img` varchar(255)  DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+  `img` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `guide`
@@ -92,6 +92,33 @@ INSERT INTO `guide` (`id`, `FIO`, `post`, `division`, `phone`, `office`, `mail`,
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `media_library`
+--
+
+CREATE TABLE `media_library` (
+  `id` int NOT NULL,
+  `filepath` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `media_library`
+--
+
+INSERT INTO `media_library` (`id`, `filepath`) VALUES
+(1, 'img/mediateka/img1.jpg'),
+(2, 'img/mediateka/img2.jpg'),
+(3, 'img/mediateka/img3.jpg'),
+(4, 'img/mediateka/img4.jpg'),
+(5, 'img/mediateka/img5.jpg'),
+(6, 'img/mediateka/img6.jpg'),
+(7, 'img/mediateka/img7.jpg'),
+(8, 'img/mediateka/img8.jpg'),
+(9, 'img/mediateka/img9.jpg'),
+(10, 'img/mediateka/img10.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `news`
 --
 
@@ -100,7 +127,7 @@ CREATE TABLE `news` (
   `date` date NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `news`
@@ -124,7 +151,7 @@ CREATE TABLE `slides` (
   `id` int NOT NULL,
   `image_path` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Дамп данных таблицы `slides`
@@ -150,6 +177,12 @@ ALTER TABLE `admin_info`
 -- Индексы таблицы `guide`
 --
 ALTER TABLE `guide`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `media_library`
+--
+ALTER TABLE `media_library`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -179,6 +212,12 @@ ALTER TABLE `admin_info`
 --
 ALTER TABLE `guide`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT для таблицы `media_library`
+--
+ALTER TABLE `media_library`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `news`
