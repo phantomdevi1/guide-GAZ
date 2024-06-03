@@ -28,8 +28,14 @@
 </head>
 <body>
 <header>
-    <img src="img/logo1.svg" alt="" onclick="toggleMenu(event)"/>
-    <h1>Новости</h1>
+    <img src="img/logo1.svg" alt="" onclick="document.location='index.php'"/>
+    <div class="toolbar">
+        <a href="index.php">Главная</a>
+        <a href="all_news.php">Новости</a>
+        <a href="guide.php">Справочник</a>
+        <a href="mediateka.php">Медиатека</a>
+        <a class="admin_auth" href="#">Для администратора</a>
+    </div>
 </header>
 
 <div class="content_all_news">

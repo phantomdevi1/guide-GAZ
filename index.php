@@ -13,15 +13,17 @@
 </head>
 <body>
 <header>
-    <img src="img/logo1.svg" alt="" onclick="toggleMenu(event)"/>
-</header>
-<div class="content_index">
-<div class="burger-menu">
+    <img src="img/logo1.svg" alt="" onclick="document.location='index.php'"/>
+    <div class="toolbar">
         <a href="index.php">Главная</a>
         <a href="all_news.php">Новости</a>
         <a href="guide.php">Справочник</a>
+        <a href="mediateka.php">Медиатека</a>
         <a class="admin_auth" href="#">Для администратора</a>
     </div>
+</header>
+<div class="content_index">
+
 
     <div id="loginModal" class="modal">
         <div class="modal-content">
@@ -116,7 +118,10 @@
 
 </div>
 
-
+<div class="index_document">
+  <p class="document_title">Наши филиалы</p>
+</div>
+<iframe class="map_index" src="https://yandex.ru/map-widget/v1/?um=constructor%3A698a0ca63fa6ff1f9f521730a53de95040f8fd4147b90fa3c25d2e5e6b848a6f&amp;source=constructor" frameborder="0"></iframe>
 
 </div>
 <script>

@@ -24,6 +24,21 @@ header h1 {
 header img {
   cursor: pointer;
 }
+
+.toolbar{
+  display: flex;
+  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.toolbar a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #2f7dbe;
+}
+.toolbar a:hover{
+  text-decoration: underline;
+}
 .content_guide {
   width: 95%;
   margin-top: 75px;
@@ -265,7 +280,7 @@ header span {
 
 .arrow {
   position: absolute;
-  top: 57%;
+  top: 65%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -319,6 +334,19 @@ header span {
   color: #2f7dbe;
   font-size: 20px;
 }
+.index_document{
+  margin-top: 50px;
+  width: 80%;
+}
+.document_title{
+  font-size: 30px;
+  color: #2f7dbe;
+}
+.map_index{
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+}
 
 /* all news */
 .content_all_news {
@@ -358,6 +386,27 @@ form textarea {
   font-size: 15px;
 }
 
+
+/* mediateka */
+.media_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+
+.media_item {
+  width: calc(33.333% - 10px);
+  box-sizing: border-box;
+}
+
+.media_item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* adaptive */
 
 @media screen and (max-width: 1320px) {
@@ -373,6 +422,9 @@ form textarea {
   .post_adaptive-guide {
     display: none;
   }
+  .toolbar{
+    width: 80%;
+  }
 }
 @media screen and (max-width: 1000px) {
   .slider-container {
@@ -383,6 +435,11 @@ form textarea {
   }
   .mail_adaptive-guide {
     display: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .toolbar{
+    width: 100%;
   }
 }
 @media screen and (max-width: 720px) {
@@ -405,22 +462,32 @@ form textarea {
   .content_admin h2 {
     text-align: center;
   }
+  .media_item{
+  width: 45%;
+}
 }
 
 @media screen and (max-width: 600px) {
   .slider-container {
     display: none;
   }
-}
-
-@media screen and (max-width: 600px) {
+  .toolbar{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .toolbar a{
+    font-size: 16px;
+  }
   .division_adaptive-guide {
     display: none;
   }
   header h1 {
     font-size: 30px;
   }
+  .media_item{
+    width: 80%;
+  }
 }
 
-@media screen and (max-width: 600px) {
-}
+
+

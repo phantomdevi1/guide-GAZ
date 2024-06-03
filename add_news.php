@@ -12,9 +12,14 @@
 </head>
 <body>
 <header>
-    <img src="img/logo1.svg" alt="" onclick="toggleMenu(event)"/>
-    <h1>Справочник</h1>
-    <span>администратор</span>
+    <img src="img/logo1.svg" alt="" onclick="document.location='index.php'"/>
+    <div class="toolbar">
+        <a href="index.php">Главная</a>
+        <a href="all_news.php">Новости</a>
+        <a href="guide.php">Справочник</a>
+        <a href="mediateka.php">Медиатека</a>
+        <a class="admin_auth" href="#">Для администратора</a>
+    </div>
 </header>
 <div class="content_admin">
 <div class="burger-menu">
@@ -27,6 +32,7 @@
       <a href="admin.php">Добавление позователей</a>
       <a href="add_news.php">Добавление новостей</a>
       <a href="add_slider.php">Добавление слайдов</a>
+      <a href="new_media.php"> Добавление в медиатеку</a>
     </div>
   <h2>Добавление новостей</h2>
   <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
