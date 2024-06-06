@@ -445,6 +445,9 @@ form textarea {
   .toolbar{
     width: 100%;
   }
+  .all_news-item {
+    text-align: center;
+}
 }
 @media screen and (max-width: 720px) {
   .content_guide p {
