@@ -93,10 +93,11 @@
           // Вывод всех новостей
           while ($row = $result->fetch_assoc()) {
               $content = $row["content"];
-              $isContentLong = mb_strlen($content) > 200; // Используем mb_strlen для корректной работы с многобайтовыми символами
-              echo "<div class='all_news-item" . ($isContentLong ? " expanded" : "") . "'>";
-              echo "<h3 class='news-title'>" . $row["title"] . "</h3>";
+              $isContentLong = mb_strlen($content) > 200;
+              echo "<div class='all_news-item" . ($isContentLong ? " expanded" : "") . "'>";              
+              echo "<h3 class='news_title-news'>" . $row["title"] . "</h3>";
               echo "<span class='all_news-date'>" . $row["date"] . "</span>";
+              echo "<hr>";
               echo "<div class='all_news-content'>" . $content . "</div>";
               if ($isContentLong) {
                 echo "<button class='read-more' onclick='toggleReadMore(this)'>Читать далее</button>";

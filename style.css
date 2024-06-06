@@ -368,12 +368,16 @@ header span {
 
 .all_news-content {
   font-size: 20px;
+  margin-top: 20px;
 }
 .all_news-item {
   background-color: #ffffffdb;
   padding: 20px;
   border-radius: 5px;
   margin: 5%;
+}
+.news_title-news{
+  margin-bottom: 10px;
 }
 .read-more {
   display: none;
